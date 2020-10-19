@@ -3,10 +3,10 @@ import React from 'react';
 const Rank = () => {
     return (
         <div>
-            <div classMane='white f3'>
-                {'Jorge, your current is...'}
+            <div className='white f3'>
+                {'Jorge, your current rank is...'}
             </div>
-            <div classMane='white f1'>
+            <div className='white f1'>
                 {'#5'}
             </div>
         </div>
