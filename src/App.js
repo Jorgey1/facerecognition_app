@@ -94,7 +94,7 @@ class App extends Component {
 
   onButtonSubmit = () => {
     this.setState({ imageUrl: this.state.input })
-      fetch('http://localhost:3000/imageurl', {
+      fetch('https://git.heroku.com/peaceful-basin-29355.git/imageurl', {
         method:'post',
         headers: {'content-type': 'application/json'},
         body: JSON.stringify({
@@ -103,7 +103,7 @@ class App extends Component {
       })
       .then(response => response.json())
       .then(response => {
-        fetch('http://localhost:3000/image', {
+        fetch('https://git.heroku.com/peaceful-basin-29355.git/image', {
           method:'put',
           headers: {'content-type': 'application/json'},
           body: JSON.stringify({
