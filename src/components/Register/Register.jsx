@@ -32,6 +32,7 @@ class Register extends React.Component {
                 name: this.state.name
             })
         })
+        .catch(err => res.status(400).json("error", err))
         .then(response => response.json())
         .then(user => {
             if (user.id) {
