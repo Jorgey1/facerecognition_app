@@ -96,7 +96,7 @@ class App extends Component {
     this.setState({ imageUrl: this.state.input })
       fetch('https://peaceful-basin-29355.herokuapp.com/imageurl', {
         method:'post',
-        headers: {'content-type': 'application/json'},
+        headers: {'Content-Type': 'application/json'},
         body: JSON.stringify({
             input: this.state.input
         })
@@ -105,7 +105,7 @@ class App extends Component {
       .then(response => {
         fetch('https://peaceful-basin-29355.herokuapp.com/image', {
           method:'put',
-          headers: {'content-type': 'application/json'},
+          headers: {'Content-Type': 'application/json'},
           body: JSON.stringify({
               id: this.state.user.id,
           })

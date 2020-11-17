@@ -21,7 +21,7 @@ class Signin extends React.Component {
     onSubmitSignIn = () => {
         fetch('https://peaceful-basin-29355.herokuapp.com/signin', {
             method:'post',
-            headers: {'content-type': 'application/json'},
+            headers: {'Content-Type': 'application/json'},
             body: JSON.stringify({
                 email: this.state.signInEmail,
                 password: this.state.signInPassword
