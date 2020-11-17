@@ -1,5 +1,6 @@
 import React from 'react';
 
+
 class Register extends React.Component {
     constructor(props) {
         super(props);
@@ -25,6 +26,7 @@ class Register extends React.Component {
     onSubmitSignIn = () => {
         fetch('https://peaceful-basin-29355.herokuapp.com/register', {
             method:'post',
+            mode: 'cors',
             headers: {'content-type': 'application/json'},
             body: JSON.stringify({
                 email: this.state.email,
@@ -32,7 +34,9 @@ class Register extends React.Component {
                 name: this.state.name
             })
         })
-        .catch(err => res.status(400).json("error", err))
+        .catch(function(erro) {
+            console.log(erro);
+        })
         .then(response => response.json())
         .then(user => {
             if (user.id) {
